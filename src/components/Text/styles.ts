@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledText = styled.div`
-  color: ${({theme}) => theme.color.text.white}  
+export const StyledText = styled.h1`
+  color: ${({theme}) => theme.text.color.white}
 `;

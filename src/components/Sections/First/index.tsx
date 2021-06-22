@@ -28,7 +28,7 @@ const First: React.FC = () => {
   );
 
   const BlackCreditCard = () => (
-    <StaticImage src={"@static/hand.png"} alt="Black FotonBank credit card" />
+    <StaticImage src={CreditCard} alt="Black FotonBank credit card" />
   );
 
   const Logo = () => (
