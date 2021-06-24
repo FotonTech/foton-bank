@@ -1991,6 +1991,11 @@
     "@types/react" "*"
     csstype "^3.0.2"
 
+"@types/tailwindcss@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-2.2.0.tgz#db107d3e4909046ff17e1a72595ab74660fadfd8"
+  integrity sha512-cqWRvax3s3ZcbBSPPxWeUjBUF4ciNgN5Q5FOYCtEN83K5IMCsrUk+PUI++UBW+QA0YwnH4GTui7vQKCs7MEKYg==
+
 "@types/tmp@^0.0.33":
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
@@ -10388,6 +10393,11 @@ react-helmet@^6.1.0:
     prop-types "^15.7.2"
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
+
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

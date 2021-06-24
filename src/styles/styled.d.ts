@@ -10,5 +10,8 @@ declare module 'styled-components' {
         black: string,
       }
     },
+    background: {
+      gray: string
+    }
   }
 }
