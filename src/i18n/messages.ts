@@ -17,6 +17,10 @@ const messages = {
           "Conte com apoio para migrar a sua startup para uma estrutura internacional.",
           "Faça importação e exportação com segurança e agilidade",
         ],
+        cards: [
+          "Economize tempo e dinheiro",
+          "Receba do exterior como PJ de forma fácil e rápida",
+        ],
       },
       thirdSection: {
         title: { mainText: "Como funciona", highlight: "a FotonBank" },
@@ -74,6 +78,10 @@ const messages = {
           "Receive capital injection without exposure to exchange variation and at fair rates",
           "Count on support to migrate your startup to an international structure",
           "Import and export safely and quicly",
+        ],
+        cards: [
+          "Save time and money",
+          "Receive from abroad as easily and quickly",
         ],
       },
       thirdSection: {

@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 import dark from "../styles/dark";
 import messages from "src/i18n/messages";
+import Second from "src/components/Sections/Second";
 
 import HowItWorks from "../components/Sections/HowItWorks";
 import GetInTouch from "../components/Sections/GetInTouch";
@@ -16,7 +17,7 @@ import GetInTouch from "../components/Sections/GetInTouch";
 const IndexPage = () => {
   const location = useLocation();
   const {
-    home: { firstSection, thirdSection, getInTouch },
+    home: { firstSection, secondSection, thirdSection, getInTouch },
   } = navigator.language === locales.pt ? messages.pt : messages.en;
   return (
     <ThemeProvider theme={dark}>
@@ -26,6 +27,12 @@ const IndexPage = () => {
           title={firstSection.title}
           description={firstSection.description}
           buttonText={firstSection.buttonText}
+        />
+        <Second
+          title={secondSection.title}
+          description={secondSection.description}
+          features={secondSection.features}
+          cards={secondSection.cards}
         />
         <HowItWorks {...thirdSection} />
         <GetInTouch {...getInTouch} />

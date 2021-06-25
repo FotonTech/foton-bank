@@ -15,7 +15,11 @@ declare module "styled-components" {
         grey: string;
         darkGrey: string;
         gradient: string;
-      };
-    };
+      },
+      background: {
+      gray: string
+      }
+    }
   }
-}
+};
+    

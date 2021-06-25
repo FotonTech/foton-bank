@@ -16,6 +16,9 @@ const dark: DefaultTheme = {
       black: "#000000",
     },
   },
+  background: {
+    gray: "#EEEEEE"
+  }
 };
 
 export default dark;
