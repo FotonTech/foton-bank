@@ -1,14 +1,25 @@
-import 'styled-components';
+import "styled-components";
+import { Breakpoints } from "./breakpoints";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    title: 'dark',
+    title: "dark";
+    breakpoints: Breakpoints;
     text: {
       color: {
-        white: string,
-        yellow: string,
-        black: string,
+        white: string;
+        yellow: string;
+        black: string;
+        brown: string;
+        darkBrown: string;
+        grey: string;
+        darkGrey: string;
+        gradient: string;
+      },
+      background: {
+      gray: string
       }
-    },
+    }
   }
-}
+};
+    
