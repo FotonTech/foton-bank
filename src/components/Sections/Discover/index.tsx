@@ -1,6 +1,10 @@
 import React from "react";
 import { RiRocket2Fill } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
+
+import { Card } from "src/components/common/";
+import { StaticImage } from "gatsby-plugin-image";
+
 import {
   Container,
   Information,
@@ -11,8 +15,6 @@ import {
   Text,
   Title,
 } from "./styles";
-import Card from "../../Card";
-import { StaticImage } from "gatsby-plugin-image";
 
 interface Props {
   title: string;
@@ -29,7 +31,7 @@ const Phone = () => (
   />
 );
 
-const Second = ({ title, description, features, cards }: Props) => {
+const Discover = ({ title, description, features, cards }: Props) => {
   const icons = [AiOutlineClockCircle, RiRocket2Fill];
   const cardsWithIcon = cards.map((card, i) => {
     return { card, icon: icons[i] };
@@ -59,4 +61,4 @@ const Second = ({ title, description, features, cards }: Props) => {
   );
 };
 
-export default Second;
+export default Discover;

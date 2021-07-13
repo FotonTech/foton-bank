@@ -3,13 +3,13 @@ import { useLocation } from "@reach/router";
 import { navigate } from "gatsby";
 
 import { locales } from "src/constants";
-import First from "src/components/Sections/First";
+import First from "src/components/Sections/HomeHero";
 import GlobalStyle from "src/styles/globalStyle";
 import { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 import dark from "../styles/dark";
 import messages from "src/i18n/messages";
-import Second from "src/components/Sections/Second";
+import Second from "src/components/Sections/Discover";
 
 import HowItWorks from "../components/Sections/HowItWorks";
 import GetInTouch from "../components/Sections/GetInTouch";
