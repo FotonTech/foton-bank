@@ -8,6 +8,8 @@ import {
   LeftContainer,
   Description,
   Button,
+  HighLightText,
+  MainText,
 } from "./styles";
 
 interface InputData {
@@ -42,8 +44,12 @@ export default function GetInTouch({
       <Wrapper>
         <LeftContainer>
           <Title>
-            <span>{mainText}</span>
-            <strong>{highlight}</strong>
+            <MainText>
+              {mainText}
+            </MainText>
+            <HighLightText>
+              {highlight}
+            </HighLightText>
           </Title>
           <Description>{description}</Description>
         </LeftContainer>
@@ -58,7 +64,9 @@ export default function GetInTouch({
           />
           <label htmlFor="contact-message">{message.label}</label>
           <textarea id="contact-message" placeholder={message.placeholder} />
-          <Button>{button}</Button>
+          <Button type="button">
+            {button}
+          </Button>
         </ContactForm>
       </Wrapper>
     </Container>

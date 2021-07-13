@@ -9,7 +9,7 @@ const messages = {
         buttonText: "Cadastre-se",
       },
       secondSection: {
-        title: "Conheça um mondo sem fronteiras",
+        title: "Conheça um mundo sem fronteiras",
         description:
           "Com o nosso time de especialistas, destrave o potencial da sua startup:",
         features: [
@@ -52,7 +52,7 @@ const messages = {
           },
           email: {
             label: "E-mail",
-            placeholder: "Digite o seu melhor aqui",
+            placeholder: "Digite o seu melhor email aqui",
           },
           message: {
             label: "Mensagem",
