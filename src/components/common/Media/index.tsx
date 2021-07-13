@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { useMediaQuery } from "react-responsive";
-import { breakpoints, BreakpointsList } from "../../styles/breakpoints";
+import { breakpoints, BreakpointsList } from "src/styles/breakpoints";
 
 interface MediaProps {
   children: ReactElement | null;

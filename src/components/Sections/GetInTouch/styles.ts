@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../../../static/getInTouchBackground.svg";
+import background from "static/getInTouchBackground.svg";
 
 export const Container = styled.section`
   width: 100%;

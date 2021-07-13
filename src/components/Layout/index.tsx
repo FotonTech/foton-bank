@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../Footer";
-import First from "../Sections/First";
+import Footer from "../common/Footer";
+import First from "../Sections/HomeHero";
 
 import { Container } from "./styles";
 

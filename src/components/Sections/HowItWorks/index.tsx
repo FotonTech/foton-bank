@@ -1,4 +1,9 @@
 import React from "react";
+
+import { StaticImage } from "gatsby-plugin-image";
+import { useTheme } from "styled-components";
+import {Media} from '../../common/';
+
 import {
   Container,
   Wrapper,
@@ -8,9 +13,6 @@ import {
   Step,
   RightContainer,
 } from "./styles";
-import { StaticImage } from "gatsby-plugin-image";
-import { useTheme } from "styled-components";
-import Media from '../../Media';
 
 interface FeatureData {
   title: string;
