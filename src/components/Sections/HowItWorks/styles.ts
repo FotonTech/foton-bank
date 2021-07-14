@@ -17,6 +17,11 @@ export const Container = styled.section`
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 30px 0 300px 0;
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    max-width: 100vw;
+    overflow: hidden;
+  }
 `;
 
 export const Wrapper = styled.section`

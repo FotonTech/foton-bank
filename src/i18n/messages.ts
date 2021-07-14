@@ -15,7 +15,7 @@ const messages = {
         features: [
           "Receba aporte de capital sem exposição à variação cambial e com taxas justas.",
           "Conte com apoio para migrar a sua startup para uma estrutura internacional.",
-          "Faça importação e exportação com segurança e agilidade",
+          "Faça importação e exportação com segurança e agilidade.",
         ],
         cards: [
           "Economize tempo e dinheiro",

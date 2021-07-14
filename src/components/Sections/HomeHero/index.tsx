@@ -20,14 +20,14 @@ const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
     <StaticImage
       width={200}
       height={325}
-      src="../../../../static/hand.png"
+      src="../../../../static/home-card-1.png"
       alt="A hand offering the FotonBank credit card for you"
     />
   );
 
   const BlackCreditCard = () => (
     <StaticImage
-      src="../../../../static/creditCard.svg"
+      src="../../../../static/home-card-2.png"
       alt="Black FotonBank credit card"
     />
   );
@@ -37,11 +37,6 @@ const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
       <StaticImage
         src="../../../../static/fotonBankLogo.svg"
         alt="Black FotonBank credit card"
-      />
-      <StaticImage
-        className="mt-3 ml-4"
-        src="../../../../static/fotonBankText.svg"
-        alt="FotonBank"
       />
     </LogoContainer>
   );

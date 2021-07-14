@@ -1,8 +1,8 @@
 import React from "react";
 import { RiRocket2Fill } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
-
-import { Card } from "src/components/common/";
+import Fade from "react-reveal/Fade";
+import { Card, Media } from "src/components/common/";
 import { StaticImage } from "gatsby-plugin-image";
 
 import {
@@ -15,11 +15,9 @@ import {
   Separator,
   Text,
   Title,
-  WhiteCard,
-  YellowCard,
-  YellowCircle,
+  PhoneShape,
   Phone,
-  PhoneBackground
+  Wrapper,
 } from "./styles";
 
 interface Props {
@@ -36,47 +34,45 @@ const Discover = ({ title, description, features, cards }: Props) => {
   });
 
   return (
-    <Container>
-      <PhoneContainer>
-        <YellowCircle>
-          <Phone>
-            <StaticImage height={500} src="../../../../static/phone.png" alt="phone" />
-          </Phone>
-          <PhoneBackground>
-            <StaticImage
-              src="../../../../static/phone-background.svg"
-              alt="phone"
-            />
-          </PhoneBackground>
-        </YellowCircle>
-
-        <WhiteCard>
-          <StaticImage
-            src="../../../../static/discover-white-card.svg"
-            alt="phone"
-          />
-        </WhiteCard>
-
-        <YellowCard>
-          <StaticImage
-            src="../../../../static/discover-yellow-card.svg"
-            alt="phone"
-          />
-        </YellowCard>
-      </PhoneContainer>
-      <Information>
-        <Title>{title}</Title>
-        <Separator />
-        <Description>{description}</Description>
-        <List>
-          {features.map((feature, index) => (
-            <ListItem key={`${feature}-${index}`}>
-              <Text>{feature}</Text>
-            </ListItem>
-          ))}
-        </List>
-      </Information>
-    </Container>
+    <Wrapper>
+      <Container>
+        <Fade>
+          <Media breakpoint="lg">
+            <PhoneContainer>
+              <PhoneShape>
+                <Phone>
+                  <StaticImage
+                    height={1900}
+                    src="../../../../static/discoverHero.png"
+                    alt="phone"
+                  />
+                </Phone>
+              </PhoneShape>
+            </PhoneContainer>
+          </Media>
+        </Fade>
+        <Information>
+          <Fade bottom>
+            <Title>{title}</Title>
+          </Fade>
+          <Fade bottom>
+            <Separator />
+          </Fade>
+          <Fade bottom>
+            <Description>{description}</Description>
+          </Fade>
+          <List>
+            {features.map((feature, index) => (
+              <Fade bottom delay={100 * index}>
+                <ListItem key={`${feature}-${index}`}>
+                  <Text>{feature}</Text>
+                </ListItem>
+              </Fade>
+            ))}
+          </List>
+        </Information>
+      </Container>
+    </Wrapper>
   );
 };
 
