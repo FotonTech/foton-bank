@@ -12,6 +12,11 @@ import {
   Steps,
   Step,
   RightContainer,
+  MainText,
+  HightLightText,
+  OptionValue,
+  OptionTitle,
+  OptionDescription,
 } from "./styles";
 
 interface FeatureData {
@@ -65,8 +70,12 @@ export default function HowItWorks({
       <Wrapper>
         <LeftContainer>
           <Title>
-            <span>{mainText}</span>
-            <strong>{highlight}</strong>
+            <MainText>
+              {mainText}
+            </MainText>
+            <HightLightText>
+              {highlight}
+            </HightLightText>
           </Title>
           <Steps>
             {features.map(
@@ -85,10 +94,14 @@ export default function HowItWorks({
                   badgeBackground={badgeBackground}
                   backgroundColor={backgroundColor}
                 >
-                  <span>{index + 1}</span>
+                  <OptionValue>
+                    {index + 1}
+                  </OptionValue>
                   <div>
-                    <h2>{title}</h2>
-                    <p>{description}</p>
+                    <OptionTitle>{title}</OptionTitle>
+                    <OptionDescription>
+                      {description}
+                    </OptionDescription>
                   </div>
                 </Step>
               )
@@ -99,7 +112,8 @@ export default function HowItWorks({
           <RightContainer>
             <StaticImage
               imgStyle={{ objectFit: "contain" }}
-              height={892}
+              height={870}
+              width={570}
               src="../../../../static/howItWorksbackground.png"
               alt="Bitcoin crypto image"
             />
