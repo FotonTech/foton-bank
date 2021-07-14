@@ -9,9 +9,11 @@ export const Container = styled.section`
     ),
     #332d2b;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 10 auto;
   position: relative;
+
+  padding-right: var(--bs-gutter-x, 1.5rem);
+  padding-left: var(--bs-gutter-x, 1.5rem);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 0;
@@ -19,7 +21,7 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.section`
-  max-width: 1075px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -128,4 +130,41 @@ export const RightContainer = styled.div`
   right: 0;
   transform: translate(0, -50%);
   z-index: 5;
+`;
+
+export const MainText = styled.p`
+  font-family: DM Sans, sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 54.5px;
+`;
+
+export const HightLightText = styled.p`
+  font-family: DM Sans, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54.5px;
+  color: ${({ theme }) => theme.text.color.yellow};
+`;
+
+export const OptionValue = styled.span`
+  font-family: Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 24px;
+`;
+
+export const OptionTitle = styled.p`
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 28px;
+  letter: 2;
+`;
+
+export const OptionDescription = styled.p`
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
 `;

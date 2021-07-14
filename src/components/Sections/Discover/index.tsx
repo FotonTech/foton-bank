@@ -9,6 +9,7 @@ import {
   Container,
   Information,
   List,
+  ListItem,
   PhoneContainer,
   Description,
   Separator,
@@ -40,10 +41,6 @@ const Discover = ({ title, description, features, cards }: Props) => {
   return (
     <Container>
       <PhoneContainer>
-        <Phone />
-        {cardsWithIcon.map(({ card, icon }) => (
-          <Card text={card} icon={icon}></Card>
-        ))}
       </PhoneContainer>
       <Information>
         <Title>{title}</Title>
@@ -51,9 +48,9 @@ const Discover = ({ title, description, features, cards }: Props) => {
         <Description>{description}</Description>
         <List>
           {features.map((feature, index) => (
-            <li key={index}>
+            <ListItem key={`${feature}-${index}`}>
               <Text>{feature}</Text>
-            </li>
+            </ListItem>
           ))}
         </List>
       </Information>

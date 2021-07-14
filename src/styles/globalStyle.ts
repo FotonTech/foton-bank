@@ -8,10 +8,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-
   body {
     font-size: 1.6em
   }
 `;
-  
+
 export default GlobalStyle;

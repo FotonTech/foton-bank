@@ -23,6 +23,5 @@ module.exports = {
       __key: "images",
     },
     "gatsby-plugin-tsconfig-paths",
-    'gatsby-plugin-postcss',
   ],
 };
