@@ -2,7 +2,9 @@ import React from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
 import { useTheme } from "styled-components";
-import { Media } from '../../common/';
+import { Media } from "../../common/";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 import {
   Container,
@@ -69,14 +71,12 @@ export default function HowItWorks({
     <Container>
       <Wrapper>
         <LeftContainer>
-          <Title>
-            <MainText>
-              {mainText}
-            </MainText>
-            <HightLightText>
-              {highlight}
-            </HightLightText>
-          </Title>
+          <Fade left>
+            <Title>
+              <MainText>{mainText}</MainText>
+              <HightLightText>{highlight}</HightLightText>
+            </Title>
+          </Fade>
           <Steps>
             {features.map(
               (
@@ -88,37 +88,44 @@ export default function HowItWorks({
                 },
                 index
               ) => (
-                <Step
-                  key={index}
-                  color={color}
-                  badgeBackground={badgeBackground}
-                  backgroundColor={backgroundColor}
-                >
-                  <OptionValue>
-                    {index + 1}
-                  </OptionValue>
-                  <div>
-                    <OptionTitle>{title}</OptionTitle>
-                    <OptionDescription>
-                      {description}
-                    </OptionDescription>
-                  </div>
-                </Step>
+                <Fade delay={100 * index} bottom>
+                  <Step
+                    key={index}
+                    color={color}
+                    badgeBackground={badgeBackground}
+                    backgroundColor={backgroundColor}
+                  >
+                    <OptionValue>{index + 1}</OptionValue>
+                    <div>
+                      <OptionTitle>{title}</OptionTitle>
+                      <OptionDescription>{description}</OptionDescription>
+                    </div>
+                  </Step>
+                </Fade>
               )
             )}
           </Steps>
         </LeftContainer>
-        <Media breakpoint="lg">
+        <Zoom delay={200}>
           <RightContainer>
             <StaticImage
-              imgStyle={{ objectFit: "contain" }}
-              height={870}
-              width={570}
-              src="../../../../static/howItWorksbackground.png"
+              backgroundColor="transparent"
+              width={852}
+              height={890}
+              className="hero-shape hero-spinner"
+              src="../../../../static/bitcoin-spinner.svg"
+              alt="Bitcoin crypto image"
+            />
+            <StaticImage
+              backgroundColor="transparent"
+              width={703}
+              height={705}
+              className="hero-shape hero-coin"
+              src="../../../../static/bitcoin-coin.svg"
               alt="Bitcoin crypto image"
             />
           </RightContainer>
-        </Media>
+        </Zoom>
       </Wrapper>
     </Container>
   );

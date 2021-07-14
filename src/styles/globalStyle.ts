@@ -9,7 +9,22 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   body {
-    font-size: 1.6em
+    font-size: 1.6em;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+     transform: translatey(-15px);
+      }
+    100% {
+      transform: translatey(0px);
+    }
   }
 `;
 

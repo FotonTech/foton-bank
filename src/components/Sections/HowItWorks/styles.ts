@@ -11,12 +11,11 @@ export const Container = styled.section`
   width: 100%;
   margin: 10 auto;
   position: relative;
-
   padding-right: var(--bs-gutter-x, 1.5rem);
   padding-left: var(--bs-gutter-x, 1.5rem);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 0;
+    padding: 30px 0 300px 0;
   }
 `;
 
@@ -26,6 +25,10 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -46,9 +49,9 @@ export const Title = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     text-align: center;
-    font-size: 24px;
+    font-size: 42px;
     line-height: 30px;
-    margin: 30px 0;
+    margin: 50px 0 45px 0;
   }
 
   > strong {
@@ -125,25 +128,64 @@ export const Step = styled.div<StepProps>`
 `;
 
 export const RightContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
+  position: relative;
   z-index: 5;
+  animation: float 8s infinite;
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .hero-shape {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &.hero-spinner {
+      width: 852px;
+      height: 890px;
+      top: -440px;
+      right: -400px;
+      animation: rotate infinite 14s linear;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        width: 400px;
+        height: 405px;
+        top: -20px;
+        left: -300px;
+      }
+    }
+
+    &.hero-coin {
+      width: 703px;
+      height: 705px;
+      top: -340px;
+      right: -290px;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        width: 330px;
+        height: 335px;
+        top: 30px;
+        left: -270px;
+      }
+    }
+  }
 `;
 
 export const MainText = styled.p`
   font-family: DM Sans, sans-serif;
   font-weight: 400;
-  font-size: 48px;
-  line-height: 54.5px;
 `;
 
 export const HightLightText = styled.p`
   font-family: DM Sans, sans-serif;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 54.5px;
   color: ${({ theme }) => theme.text.color.yellow};
 `;
 
@@ -155,15 +197,15 @@ export const OptionValue = styled.span`
 `;
 
 export const OptionTitle = styled.p`
-  font-family: Manrope, sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 28px;
-  letter: 2;
+  letter-spacing: 2px;
 `;
 
 export const OptionDescription = styled.p`
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
