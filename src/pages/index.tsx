@@ -16,9 +16,13 @@ import GetInTouch from "../components/Sections/GetInTouch";
 
 const IndexPage = () => {
   const location = useLocation();
+  var BEACON_SUPPORTED = typeof navigator === "object";
   const {
     home: { firstSection, secondSection, thirdSection, getInTouch },
-  } = navigator.language === locales.pt ? messages.pt : messages.en;
+  } =
+    BEACON_SUPPORTED && navigator.language === locales.pt
+      ? messages.pt
+      : messages.en;
   return (
     <ThemeProvider theme={dark}>
       <GlobalStyle />
