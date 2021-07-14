@@ -7,12 +7,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size:62.5%
   }
-
   body {
     font-size: 1.6em
   }
 `;
-  
+
 export default GlobalStyle;

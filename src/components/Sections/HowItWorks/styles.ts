@@ -12,6 +12,9 @@ export const Container = styled.section`
   margin: 10 auto;
   position: relative;
 
+  padding-right: var(--bs-gutter-x, 1.5rem);
+  padding-left: var(--bs-gutter-x, 1.5rem);
+
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 0;
   }

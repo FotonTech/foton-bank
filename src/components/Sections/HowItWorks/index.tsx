@@ -2,7 +2,7 @@ import React from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
 import { useTheme } from "styled-components";
-import {Media} from '../../common/';
+import { Media } from '../../common/';
 
 import {
   Container,

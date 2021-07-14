@@ -14,6 +14,9 @@ export const Container = styled.section`
   padding: 185px 0;
   overflow: hidden;
 
+  padding-right: var(--bs-gutter-x, 1.5rem);
+  padding-left: var(--bs-gutter-x, 1.5rem);
+
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 30px 0;
   }
@@ -98,10 +101,15 @@ export const ContactForm = styled.form`
     border-radius: 6px;
     font-family: DM Sans, sans-serif;
     background-color: transparent;
+    height: 64px;
     font-size: 14px;
     color: ${({ theme }) => theme.text.color.white};
     padding: 15px 22px;
     margin-bottom: 25px;
+  }
+
+  textarea {
+    height: 127px;
   }
 `;
 
