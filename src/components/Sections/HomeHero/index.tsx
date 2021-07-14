@@ -1,10 +1,15 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Text, Button } from "src/components/common";
+import { Button } from "src/components/common";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
+
 import {
   Container,
   LogoContainer,
   LogoImage,
+  Title,
+  Paragraph,
   Description,
   CreditCardContainer,
   Info,
@@ -18,17 +23,10 @@ interface Props {
 const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
   const CreditCardWithHand = () => (
     <StaticImage
-      width={200}
-      height={325}
-      src="../../../../static/hand.png"
+      width={631}
+      height={742}
+      src="../../../../static/cards.png"
       alt="A hand offering the FotonBank credit card for you"
-    />
-  );
-
-  const BlackCreditCard = () => (
-    <StaticImage
-      src="../../../../static/creditCard.svg"
-      alt="Black FotonBank credit card"
     />
   );
 
@@ -38,30 +36,34 @@ const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
         src="../../../../static/fotonBankLogo.svg"
         alt="Black FotonBank credit card"
       />
-      <StaticImage
-        className="mt-3 ml-4"
-        src="../../../../static/fotonBankText.svg"
-        alt="FotonBank"
-      />
     </LogoContainer>
   );
 
   return (
     <Container>
       <Info>
-        <Logo />
+        <Fade bottom>
+          <Logo />
+        </Fade>
         <Description>
-          <Text>{title}</Text>
-          <Text>{description}</Text>
+          <Fade bottom>
+            <Title>{title}</Title>
+          </Fade>
+          <Fade bottom>
+            <Paragraph>{description}</Paragraph>
+          </Fade>
         </Description>
-        <Button background="linear-gradient(90deg, #F1E369 -0.36%, #FFA944 100%)">
-          <p>{buttonText}</p>
-        </Button>
+        <Fade bottom>
+          <Button background="linear-gradient(90deg, #F1E369 -0.36%, #FFA944 100%)">
+            <p>{buttonText}</p>
+          </Button>
+        </Fade>
       </Info>
 
       <CreditCardContainer>
-        <CreditCardWithHand />
-        <BlackCreditCard />
+        <Zoom>
+          <CreditCardWithHand />
+        </Zoom>
       </CreditCardContainer>
     </Container>
   );

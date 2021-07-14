@@ -1,8 +1,8 @@
 import React from "react";
 import { RiRocket2Fill } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
-
-import { Card } from "src/components/common/";
+import Fade from "react-reveal/Fade";
+import { Card, Media } from "src/components/common/";
 import { StaticImage } from "gatsby-plugin-image";
 
 import {
@@ -15,6 +15,9 @@ import {
   Separator,
   Text,
   Title,
+  PhoneShape,
+  Phone,
+  Wrapper,
 } from "./styles";
 
 interface Props {
@@ -24,14 +27,6 @@ interface Props {
   cards: string[];
 }
 
-const Phone = () => (
-  <StaticImage
-    height={800}
-    src="../../../../static/fotonBankInPhone.png"
-    alt="Phone with Foton Bank home page"
-  />
-);
-
 const Discover = ({ title, description, features, cards }: Props) => {
   const icons = [AiOutlineClockCircle, RiRocket2Fill];
   const cardsWithIcon = cards.map((card, i) => {
@@ -39,22 +34,45 @@ const Discover = ({ title, description, features, cards }: Props) => {
   });
 
   return (
-    <Container>
-      <PhoneContainer>
-      </PhoneContainer>
-      <Information>
-        <Title>{title}</Title>
-        <Separator />
-        <Description>{description}</Description>
-        <List>
-          {features.map((feature, index) => (
-            <ListItem key={`${feature}-${index}`}>
-              <Text>{feature}</Text>
-            </ListItem>
-          ))}
-        </List>
-      </Information>
-    </Container>
+    <Wrapper>
+      <Container>
+        <Fade>
+          <Media breakpoint="lg">
+            <PhoneContainer>
+              <PhoneShape>
+                <Phone>
+                  <StaticImage
+                    height={1900}
+                    src="../../../../static/discoverHero.png"
+                    alt="phone"
+                  />
+                </Phone>
+              </PhoneShape>
+            </PhoneContainer>
+          </Media>
+        </Fade>
+        <Information>
+          <Fade bottom>
+            <Title>{title}</Title>
+          </Fade>
+          <Fade bottom>
+            <Separator />
+          </Fade>
+          <Fade bottom>
+            <Description>{description}</Description>
+          </Fade>
+          <List>
+            {features.map((feature, index) => (
+              <Fade bottom delay={100 * index}>
+                <ListItem key={`${feature}-${index}`}>
+                  <Text>{feature}</Text>
+                </ListItem>
+              </Fade>
+            ))}
+          </List>
+        </Information>
+      </Container>
+    </Wrapper>
   );
 };
 
