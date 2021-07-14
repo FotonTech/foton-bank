@@ -13,6 +13,7 @@ export const Container = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding-top: 95px;
+    padding-bottom: 0;
     max-width: 1300px;
   }
 `;
