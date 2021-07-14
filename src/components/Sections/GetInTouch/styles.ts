@@ -3,17 +3,19 @@ import background from "static/getInTouchBackground.svg";
 
 export const Container = styled.section`
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   background: radial-gradient(
-      115.6% 41.97% at 49.97% 96.12%,
-      #453b3b 0%,
-      rgba(62, 52, 52, 0) 100%
-    ),
-    #000000;
+    115.6% 41.97% at 49.97% 96.12%,
+    #453b3b 0%,
+    rgba(62, 52, 52, 0) 100%
+  ),
+  #000000;
   position: relative;
-  padding: 155px 0;
+  padding: 185px 0;
   overflow: hidden;
+
+  padding-right: var(--bs-gutter-x, 1.5rem);
+  padding-left: var(--bs-gutter-x, 1.5rem);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 30px 0;
@@ -21,15 +23,16 @@ export const Container = styled.section`
 
   &:before {
     width: 745px;
+    margin: 0 auto;
     height: 600px;
     content: "";
     display: block;
     position: absolute;
-    left: -75px;
     bottom: 0;
     background-image: url(${background});
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: 4.2rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
       content: none;
@@ -38,7 +41,7 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.div`
-  max-width: 1075px;
+  max-width: 1275px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -85,20 +88,28 @@ export const ContactForm = styled.form`
   label {
     margin-bottom: 12px;
     font-weight: 500;
+    line-height: 20.83px;
+    font-family: DM Sans, sans-serif;
     font-size: 16px;
     color: ${({ theme }) => theme.text.color.white};
   }
 
   input,
   textarea {
-    border: 1px solid #707882;
+    border: 0.1rem solid #707882;
     box-sizing: border-box;
     border-radius: 6px;
+    font-family: DM Sans, sans-serif;
     background-color: transparent;
+    height: 64px;
     font-size: 14px;
     color: ${({ theme }) => theme.text.color.white};
     padding: 15px 22px;
     margin-bottom: 25px;
+  }
+
+  textarea {
+    height: 127px;
   }
 `;
 
@@ -119,7 +130,9 @@ export const Description = styled.p`
   font-size: 18px;
   line-height: 32px;
   color: ${({ theme }) => theme.text.color.white};
-
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  font-feature-settings: 'liga' off;
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     margin-top: 15px;
     margin-bottom: 40px;
@@ -134,7 +147,32 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   color: ${({ theme }) => theme.text.color.black};
+  font-style: normal;
+  font-family: DM Sans, sans-serif;
+  line-height: 23px;
   font-weight: bold;
   font-size: 18px;
   border-radius: 20px;
+  border-width: 0px;
+
+  &:hover {
+    background: linear-gradient(50deg, #F2E329 -0.56%, #FFA944 90%);
+    transition: opacity 0.5s;
+  }
+`;
+
+export const HighLightText = styled.p`
+  font-size: 50px;
+  line-height: 52.5px;
+  font-weight: 700;
+  font-family: DM Sans, sans-serif;
+  color: ${({ theme }) => theme.text.color.yellow}
+`;
+
+export const MainText = styled.p`
+  font-size: 50px;
+  line-height: 52.5px;
+  font-weight: 400;
+  font-family: DM Sans, sans-serif;
+  color: ${({ theme }) => theme.text.color.white}
 `;

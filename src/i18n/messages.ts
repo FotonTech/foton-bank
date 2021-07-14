@@ -9,7 +9,7 @@ const messages = {
         buttonText: "Cadastre-se",
       },
       secondSection: {
-        title: "Conheça um mondo sem fronteiras",
+        title: "Conheça um mundo sem fronteiras",
         description:
           "Com o nosso time de especialistas, destrave o potencial da sua startup:",
         features: [
@@ -25,17 +25,17 @@ const messages = {
       thirdSection: {
         title: { mainText: "Como funciona", highlight: "a FotonBank" },
         featureOne: {
-          title: "Cadastre-se",
+          title: "CADASTRE-SE",
           description:
             "Realize o seu cadastro de forma simples e fácil em menos de 2 minutos.",
         },
         featureTwo: {
-          title: "Crie uma conta",
+          title: "CRIE UMA CONTA",
           description:
             "Informe motivo da transferência, dados da conta de destino, valor a ser enviado.",
         },
         featureThree: {
-          title: "Faça um TED",
+          title: "FAÇA UMA TED",
           description:
             "Realize uma TED para o nosso banco parceiro. Após identificarmos o seu pagamento o crédito é realizado na conta de destino em até 1 dia útil.",
         },
@@ -52,7 +52,7 @@ const messages = {
           },
           email: {
             label: "E-mail",
-            placeholder: "Digite o seu melhor aqui",
+            placeholder: "Digite o seu melhor email aqui",
           },
           message: {
             label: "Mensagem",
@@ -87,16 +87,16 @@ const messages = {
       thirdSection: {
         title: { mainText: "How it works", highlight: "FotonBank" },
         featureOne: {
-          title: "Register",
+          title: "REGISTER",
           description: "Register simply and easily in less than 2 minutes.",
         },
         featureTwo: {
-          title: "Create an account",
+          title: "CREATE AN ACCOUNT",
           description:
             "Inform reason for transfer, destination account data, amount to be sent.",
         },
         featureThree: {
-          title: "Banking Transfer",
+          title: "BANKING TRANSFER",
           description:
             "Hold a transfer for our partner bank. After we identify your payment, the credit is made to the destination account within 1 business day.",
         },

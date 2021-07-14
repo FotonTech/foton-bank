@@ -46,6 +46,7 @@ export const Separator = styled.hr`
 export const List = styled.ul`
   margin-left: 2.8rem;
   margin-top: 3.6rem;
+  list-style-type: circle;
 `
 export const Text = styled.span`
   list-style: circle;
@@ -54,4 +55,11 @@ export const Text = styled.span`
   font-size: 1.8rem;
   line-height: 25px;
   margin-bottom: 1.2rem;
+`
+
+export const ListItem = styled.li`
+
+`
+
+export const BulletItem = styled.li`
 `
