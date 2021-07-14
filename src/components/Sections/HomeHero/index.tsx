@@ -55,7 +55,7 @@ const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
         </Description>
         <Fade bottom>
           <Button background="linear-gradient(90deg, #F1E369 -0.36%, #FFA944 100%)">
-            <p>{buttonText}</p>
+            {buttonText}
           </Button>
         </Fade>
       </Info>
