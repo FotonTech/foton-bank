@@ -1089,6 +1089,7 @@
     js-yaml "^3.13.1"
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
+
 "@fontsource/dm-sans@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.5.0.tgz#0dae7ab3563b3ffd47181a3fa4c9c6a33fb04c5e"
@@ -1108,6 +1109,13 @@
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.0.tgz#e6d05dfdfe74580001010302f9c418067b45a6a9"
   integrity sha512-49+A0IkTTv3cpS1YecrZNCqvlVTThUt/qioiAIZsXfgC3TqavgRqwXXvroXmhVeP/f0sqZw5CRDMS1Hj4aSTbQ==
+
+"@fullhuman/postcss-purgecss@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-4.0.3.tgz#55d71712ec1c7a88e0d1ba5f10ce7fb6aa05beb4"
+  integrity sha512-/EnQ9UDWGGqHkn1UKAwSgh+gJHPKmD+Z+5dQ4gWT4qq2NUyez3zqAfZNwFH3eSgmgO+wjTXfhlLchx2M9/K+7Q==
+  dependencies:
+    purgecss "^4.0.3"
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"

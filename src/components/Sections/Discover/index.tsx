@@ -15,6 +15,11 @@ import {
   Separator,
   Text,
   Title,
+  WhiteCard,
+  YellowCard,
+  YellowCircle,
+  Phone,
+  PhoneBackground
 } from "./styles";
 
 interface Props {
@@ -23,14 +28,6 @@ interface Props {
   features: string[];
   cards: string[];
 }
-
-const Phone = () => (
-  <StaticImage
-    height={800}
-    src="../../../../static/fotonBankInPhone.png"
-    alt="Phone with Foton Bank home page"
-  />
-);
 
 const Discover = ({ title, description, features, cards }: Props) => {
   const icons = [AiOutlineClockCircle, RiRocket2Fill];
@@ -41,6 +38,31 @@ const Discover = ({ title, description, features, cards }: Props) => {
   return (
     <Container>
       <PhoneContainer>
+        <YellowCircle>
+          <Phone>
+            <StaticImage height={500} src="../../../../static/phone.png" alt="phone" />
+          </Phone>
+          <PhoneBackground>
+            <StaticImage
+              src="../../../../static/phone-background.svg"
+              alt="phone"
+            />
+          </PhoneBackground>
+        </YellowCircle>
+
+        <WhiteCard>
+          <StaticImage
+            src="../../../../static/discover-white-card.svg"
+            alt="phone"
+          />
+        </WhiteCard>
+
+        <YellowCard>
+          <StaticImage
+            src="../../../../static/discover-yellow-card.svg"
+            alt="phone"
+          />
+        </YellowCard>
       </PhoneContainer>
       <Information>
         <Title>{title}</Title>
