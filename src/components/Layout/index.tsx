@@ -1,8 +1,12 @@
 import React from "react";
 import Footer from "../common/Footer";
-import First from "../Sections/HomeHero";
-
 import { Container } from "./styles";
+
+import "@fontsource/open-sans/300.css";
+import "@fontsource/open-sans/400.css";
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/700.css";
+import "@fontsource/manrope/800.css";
 
 const Layout: React.FC = ({ children }) => (
   <>
