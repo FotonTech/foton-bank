@@ -47,19 +47,20 @@ export const PhoneContainer = styled.figure`
 export const Title = styled.h1`
   font-family: "DM Sans", sans-serif;
   font-size: 45px;
-  line-height: 92.2%;
+  line-height: 80.2%;
   max-width: 480px;
   color: ${({ theme }) => theme.text.color.white};
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 48px;
     line-height: 105.2%;
+    margin-bottom: 2rem;
   }
 `;
 
 export const Description = styled.p`
-  margin-top: 1.8rem;
+  margin-top: 1.2rem;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -68,6 +69,7 @@ export const Description = styled.p`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 1.6rem;
+    margin-top: 1.8rem;
   }
 `;
 

@@ -5,7 +5,7 @@ export const Container = styled.div`
   text-align: center;
   background-color: black;
   color: #d9dbe1;
-  padding: 60px 5.7rem 30px;
+  padding: 40px 5.7rem 2px;
 
   p {
     font-size: 0.88rem;

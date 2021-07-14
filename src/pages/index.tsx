@@ -18,7 +18,8 @@ const IndexPage = () => {
   const location = useLocation();
   const {
     home: { firstSection, secondSection, thirdSection, getInTouch },
-  } = navigator.language === locales.pt ? messages.pt : messages.en;
+  } =
+    navigator && navigator.language === locales.pt ? messages.pt : messages.en;
   return (
     <ThemeProvider theme={dark}>
       <GlobalStyle />
