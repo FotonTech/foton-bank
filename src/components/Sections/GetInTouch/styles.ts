@@ -5,14 +5,14 @@ export const Container = styled.section`
   width: 100%;
   margin: 0 auto;
   background: radial-gradient(
-      115.6% 41.97% at 49.97% 96.12%,
-      #453b3b 0%,
-      rgba(62, 52, 52, 0) 100%
-    ),
-    #000000;
+    115.6% 41.97% at 49.97% 96.12%,
+    #453b3b 0%,
+    rgba(62, 52, 52, 0) 100%
+  ),
+  #000000;
   position: relative;
-  padding: 155px 0px;
-
+  padding: 185px 0;
+  overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 30px 0;
@@ -20,12 +20,16 @@ export const Container = styled.section`
 
   &:before {
     width: 745px;
+    margin: 0 auto;
     height: 600px;
     content: "";
     display: block;
     position: absolute;
-    left: -75px;
     bottom: 0;
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 4.2rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
       content: none;
@@ -34,8 +38,7 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.div`
-  width: 1080px;
-
+  max-width: 1275px;
   margin: 0 auto;
   display: flex;
   align-items: center;
