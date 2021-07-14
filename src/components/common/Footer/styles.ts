@@ -22,6 +22,8 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  max-width: 1260px;
+  margin: 0 auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
