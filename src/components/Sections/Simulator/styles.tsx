@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface CommonProps {
+  color?: string,
+}
+
 export const Container = styled.div`
   position: relative;
   background: radial-gradient(
@@ -31,6 +35,11 @@ export const LogoContainer = styled.div`
     margin-bottom: 60px;
     margin-left: 170px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-top: -20px;
+  }
+
 `;
 
 export const Info = styled.div`
@@ -43,8 +52,14 @@ export const CardContainer = styled.div`
   position: absolute;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    height: 670px;
+    height: 620px;
     width: 540px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-top: 60px;
+    width: 95%;
+    padding: 0;
   }
 `;
 
@@ -60,7 +75,7 @@ export const CardHeader = styled.div`
 `;
 
 export const CardHeaderText = styled.p`
-  font-family: DM Sans, sans-serif;
+  font-family: "DM Sans";
   justify-self: center;
   font-size: 18px;
   text-align: center;
@@ -75,7 +90,7 @@ export const Content = styled.div`
 
 export const Label = styled.p`
   color: #FFF;
-  font-family: DM Sans, sans-serif;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -94,7 +109,7 @@ export const Button = styled.button`
   justify-content: center;
   color: ${({ theme }) => theme.text.color.black};
   font-style: normal;
-  font-family: DM Sans, sans-serif;
+  font-family: "DM Sans";
   line-height: 23px;
   font-weight: bold;
   font-size: 18px;
@@ -125,7 +140,7 @@ export const Button = styled.button`
 `;
 
 export const InputContainer = styled.div`
-  margin: 60px;
+  margin: 50px;
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     margin: 10px;
   }
@@ -133,8 +148,9 @@ export const InputContainer = styled.div`
 
 export const Input = styled.input`
   border: 0;
-  font-family: DM Sans, sans-serif;
+  font-family: "DM Sans";
   font-style: normal;
+  margin-top: 20px;
   font-weight: bold;
   font-size: 14px;
   color: #FFF;
@@ -146,6 +162,17 @@ export const Input = styled.input`
   width: 100%;
   background: transparent;
   border-bottom: 2px solid #727272;
+  background: url("") no-repeat scroll 7px 7px;
+  background-size: 32px;
+
+  ::placeholder {
+    color: #FFF;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 1;
+    padding-left: 40px;
+  }
 `;
 
 export const Main = styled.div`
@@ -158,28 +185,31 @@ export const Main = styled.div`
   }
 `;
 
-export const CardItem = styled.div`
-  background: #FFF;
+export const CardItem = styled.div<CommonProps>`
+  background: ${(props) => props.color || '#FFF'};
   width: 100%;
   height: 67px;
   padding: 10px;
+  margin-top: 20px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid #6F6F6F;
   align-items: center;
 `;
 
-export const CardText = styled.p`
+export const CardText = styled.p<CommonProps>`
   text-align: center;
-  color: #383838;
+  color: ${(props) => props.color || '#383838'};
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  font-family: DM Sans, sans-serif;
+  font-family: "DM Sans";
 `;
 
 export const CardLink = styled.a`
-  font-family: DM Sans, sans-serif;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -190,4 +220,8 @@ export const CardIcon = styled.div`
   margin-left: 20px;
   display: flex;
   justify-content: center;
+`;
+
+export const IconContainer = styled.div`
+
 `;

@@ -20,7 +20,7 @@ import {
   CardItem,
   CardText,
   CardLink,
-  CardIcon
+  CardIcon,
 } from './styles';
 
 const Logo = () => (
@@ -44,20 +44,20 @@ const Simulator: React.FC = () => {
                 RECEBIMENTO
               </CardHeaderText>
             </CardHeader>
-
             <Content>
               <InputContainer>
                 <Label>
                   Você recebe
                 </Label>
-                <Input />
+                <Input placeholder="USD" />
+
               </InputContainer>
 
               <InputContainer>
                 <Label>
                   Convertemos para:
                 </Label>
-                <Input />
+                <Input placeholder="BRL" />
               </InputContainer>
 
               <InputContainer>
@@ -75,8 +75,24 @@ const Simulator: React.FC = () => {
                     Entenda
                   </CardLink>
                 </CardItem>
+                <CardItem color="transparent">
+                  <CardIcon>
+                    <StaticImage
+                      src="../../../../static/calendar.svg"
+                      alt="calendar"
+                    />
+                  </CardIcon>
+                  <div>
+                    <CardText color="#9A9A9A">
+                      Após da aprovação do cadastro,
+                    </CardText>
+                    <CardText color="#9A9A9A">
+                      o pagamento chega em até 1 dia útil.
+                    </CardText>
+                  </div>
+                  <CardLink />
+                </CardItem>
               </InputContainer>
-
             </Content>
           </CardContainer>
         </Main>
