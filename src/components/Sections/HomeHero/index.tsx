@@ -46,7 +46,7 @@ const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
           <Logo />
         </Fade>
         <Description>
-          <Fade bottom>
+          <Fade bottom duration={1000}>
             <Title>{title}</Title>
           </Fade>
           <Fade bottom>

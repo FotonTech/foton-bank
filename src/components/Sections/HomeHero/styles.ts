@@ -4,11 +4,33 @@ export const Container = styled.div`
   position: relative;
   background-color: #000;
   max-width: 100vw;
-  overflow: hidden;
   margin: 0 auto;
+  overflow: hidden;
   padding: 55px 0 210px 0;
   padding-right: var(--bs-gutter-x, 2rem);
   padding-left: var(--bs-gutter-x, 2rem);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 8vw;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    filter: blur(100px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -200px;
+    right: 14vw;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    filter: blur(120px);
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding-top: 115px;
