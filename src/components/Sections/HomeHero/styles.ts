@@ -36,6 +36,7 @@ export const Container = styled.div`
     padding-top: 115px;
     padding-bottom: 120px;
     max-width: 1300px;
+    min-height: 100vh;
   }
 `;
 
