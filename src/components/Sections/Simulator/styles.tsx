@@ -14,11 +14,8 @@ export const Container = styled.div`
     #000000;
   min-height: 100vh;
   max-width: 100vw;
-  overflow: hidden;
   margin: 0 auto;
-  padding: 55px 0 190px 0;
-  padding-right: var(--bs-gutter-x, 2rem);
-  padding-left: var(--bs-gutter-x, 2rem);
+  padding: 1rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding-top: 95px;
@@ -36,10 +33,6 @@ export const LogoContainer = styled.div`
     margin-left: 170px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-top: -20px;
-  }
-
 `;
 
 export const Info = styled.div`
@@ -49,7 +42,6 @@ export const CardContainer = styled.div`
   background: #292929;
   border-radius: 10px;
   margin-top: 30px;
-  position: absolute;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     height: 620px;
@@ -58,7 +50,6 @@ export const CardContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     margin-top: 60px;
-    width: 95%;
     padding: 0;
   }
 `;
@@ -98,7 +89,9 @@ export const Label = styled.p`
 `;
 
 export const ButtonContainer = styled.div`
-
+  display: flex;
+  justify-content: center;
+  padding-top: 44px;
 `;
 
 export const Button = styled.button`
@@ -146,11 +139,31 @@ export const InputContainer = styled.div`
   }
 `;
 
-export const Input = styled.input`
+export const InputWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const Icon = styled.i`
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const InputTitle = styled.h1`
+  color: white;
+  font-family: 'DM SANS';
+  font-size: 1.5rem;
+`;
+
+export const StyledInput = styled.input`
+  padding: 1rem 1rem 1rem 2.5rem;
   border: 0;
   font-family: "DM Sans";
   font-style: normal;
-  margin-top: 20px;
   font-weight: bold;
   font-size: 14px;
   color: #FFF;
@@ -158,12 +171,15 @@ export const Input = styled.input`
   outline: none;
   transition: .2s ease-in-out;
   box-sizing: border-box;
-  height: 3rem;
   width: 100%;
   background: transparent;
   border-bottom: 2px solid #727272;
   background: url("") no-repeat scroll 7px 7px;
   background-size: 32px;
+
+  &:focus {
+    border-color: #f2e329;
+  }
 
   ::placeholder {
     color: #FFF;
@@ -171,18 +187,14 @@ export const Input = styled.input`
     font-size: 14px;
     font-weight: bold;
     opacity: 1;
-    padding-left: 40px;
   }
 `;
 
 export const Main = styled.div`
   display: flex;
-  margin-top: 300px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    margin-top: 200px;
-  }
 `;
 
 export const CardItem = styled.div<CommonProps>`
@@ -215,6 +227,7 @@ export const CardLink = styled.a`
   font-size: 16px;
   color: #DEA30A;
   margin-right: 20px;
+  cursor: pointer;
 `
 export const CardIcon = styled.div`
   margin-left: 20px;
