@@ -7,7 +7,6 @@ import Zoom from "react-reveal/Zoom";
 import {
   Container,
   LogoContainer,
-  LogoImage,
   Title,
   Paragraph,
   Description,
