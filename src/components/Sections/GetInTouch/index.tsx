@@ -116,8 +116,8 @@ export default function GetInTouch({
                   <Fade bottom>
                     <FormInput
                       error={errors.name}
-                      label="Name"
-                      placeholder="Type your name"
+                      label={name.label}
+                      placeholder={name.placeholder}
                       field={field}
                     />
                   </Fade>
@@ -137,8 +137,8 @@ export default function GetInTouch({
                   <Fade bottom>
                     <FormInput
                       error={errors.email}
-                      label="E-mail"
-                      placeholder="Enter your best email here"
+                      label={email.label}
+                      placeholder={email.placeholder}
                       field={field}
                     />
                   </Fade>
@@ -152,8 +152,8 @@ export default function GetInTouch({
                   <Fade bottom>
                     <FormInput
                       error={errors.message}
-                      label="Mesage"
-                      placeholder="Tell us about your project"
+                      label={message.label}
+                      placeholder={message.placeholder}
                       field={field}
                       type="textarea"
                     />
