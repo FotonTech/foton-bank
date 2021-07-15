@@ -53,7 +53,7 @@ const Discover = ({ title, description, features, cards }: Props) => {
         </Fade>
         <Information>
           <Fade bottom>
-            <Title>{title}</Title>
+            <Title dangerouslySetInnerHTML={{ __html: title }} />
           </Fade>
           <Fade bottom>
             <Separator />

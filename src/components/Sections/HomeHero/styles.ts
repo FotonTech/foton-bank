@@ -52,11 +52,16 @@ export const Title = styled.h1`
   font-family: "DM Sans";
   color: #fff;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 39px;
   line-height: 106.52%;
   margin-bottom: 10px;
   max-width: 450px;
+
+  strong {
+    font-weight: 700;
+    color: #fee147;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 48px;
@@ -85,9 +90,9 @@ export const CreditCardContainer = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     right: 100px;
-    width: 500px;
-    height: 600px;
-    top: 50%;
+    width: 570px;
+    height: 610px;
+    top: 45%;
     transform: translateY(-50%);
   }
 `;

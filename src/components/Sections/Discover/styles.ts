@@ -49,8 +49,13 @@ export const Title = styled.h1`
   font-size: 45px;
   line-height: 80.2%;
   max-width: 480px;
+  font-weight: 400;
   color: ${({ theme }) => theme.text.color.white};
   margin-bottom: 1.6rem;
+
+  strong {
+    font-weight: 700;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 48px;
@@ -139,11 +144,11 @@ export const PhoneShape = styled.div`
   display: none;
   position: absolute;
   left: 0;
-  transform: translateX(-26%);
+  transform: translateX(-32%);
   display: flex;
   align-items: center;
-  width: 1600px;
-  height: 1600px;
+  width: 1700px;
+  height: 1700px;
   margin-top: 5%;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
