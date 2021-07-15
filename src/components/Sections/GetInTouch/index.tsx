@@ -165,7 +165,7 @@ export default function GetInTouch({
                 "Send"
               ) : (
                 <StaticImage
-                  src="/assets/loader.svg"
+                  src="../../../../static/loader.svg"
                   width={44}
                   height={44}
                   alt="Loading page..."

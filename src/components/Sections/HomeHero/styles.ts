@@ -3,17 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: relative;
   background-color: #000;
-  min-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
   margin: 0 auto;
-  padding: 55px 0 190px 0;
+  padding: 55px 0 210px 0;
   padding-right: var(--bs-gutter-x, 2rem);
   padding-left: var(--bs-gutter-x, 2rem);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding-top: 95px;
-    padding-bottom: 0;
+    padding-top: 115px;
+    padding-bottom: 120px;
     max-width: 1300px;
   }
 `;
