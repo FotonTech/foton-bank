@@ -56,7 +56,7 @@ export const Title = styled.h1`
   font-size: 39px;
   line-height: 106.52%;
   margin-bottom: 10px;
-  max-width: 450px;
+  max-width: 510px;
 
   strong {
     font-weight: 700;
