@@ -1972,6 +1972,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-scroll@^1.8.3":
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/@types/react-scroll/-/react-scroll-1.8.3.tgz#80951ed1934ab49d4926aad95c26607b8b1a9713"
+  integrity sha512-Xt0+Y58pwrIv+vRFxcyKDoo0gBWBR2eNMJ4XRMhQpZdGUtmjnszPi/wFEJSAY+5r83ypJsSA+hOpSc3hRpYlWw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "17.0.11"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.11.tgz#67fcd0ddbf5a0b083a0f94e926c7d63f3b836451"
@@ -8196,6 +8203,11 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
 lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
@@ -10464,6 +10476,14 @@ react-reveal@^1.2.2:
   integrity sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw==
   dependencies:
     prop-types "^15.5.10"
+
+react-scroll@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.8.2.tgz#68e35b74ae296c88e7863393c9fd49f05afa29f5"
+  integrity sha512-f2ZEG5fsPbPTySI9ekcFpETCcNlqbmwbQj9hhzYK8tkgv+PA8APatSt66o/q0KSkDZxyT98ONTtXp9x0lyowEw==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.7.2"
 
 react-side-effect@^2.1.0:
   version "2.1.1"

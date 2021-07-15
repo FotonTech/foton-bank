@@ -3,13 +3,13 @@ const messages = {
     home: {
       firstSection: {
         title:
-          "Transferências internacionais para pessoas físicas e empresas de todos os tamanhos",
+          "Transferências internacionais para <strong>pessoas físicas e empresas de todos os tamanhos</strong>",
         description:
           "Envie ou receba dinheiro de fora com as menores taxas e a melhor cotação.",
         buttonText: "Cadastre-se",
       },
       secondSection: {
-        title: "Conheça um mundo sem fronteiras",
+        title: "Conheça um mundo <strong>sem fronteiras</strong>",
         description:
           "Com o nosso time de especialistas, destrave o potencial da sua startup:",
         features: [
@@ -66,13 +66,13 @@ const messages = {
     home: {
       firstSection: {
         title:
-          "International transfers for individuals and companies of all sizes",
+          "International transfers for <strong>individuals and companies of all sizes</strong>",
         description:
           "Send or receive money abroad with the lowest reates and the best quote.",
         buttonText: "Register now",
       },
       secondSection: {
-        title: "Discover a world without borders",
+        title: "Discover a world <strong>without borders</strong>",
         description: `With our team of experts, unlock your startup's potential:`,
         features: [
           "Receive capital injection without exposure to exchange variation and at fair rates",

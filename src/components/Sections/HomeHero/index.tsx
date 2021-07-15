@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Button } from "src/components/common";
+import { Link } from "react-scroll";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
@@ -41,26 +42,28 @@ const HomeHero: React.FC<Props> = ({ title, description, buttonText }) => {
   return (
     <Container>
       <Info>
-        <Fade bottom>
+        <Fade bottom ssrReveal>
           <Logo />
         </Fade>
         <Description>
-          <Fade bottom>
-            <Title>{title}</Title>
+          <Fade bottom duration={1000} ssrReveal>
+            <Title dangerouslySetInnerHTML={{ __html: title }} />
           </Fade>
-          <Fade bottom>
+          <Fade bottom ssrReveal>
             <Paragraph>{description}</Paragraph>
           </Fade>
         </Description>
-        <Fade bottom>
-          <Button background="linear-gradient(90deg, #F1E369 -0.36%, #FFA944 100%)">
-            {buttonText}
-          </Button>
+        <Fade bottom ssrReveal>
+          <Link spy={true} smooth={true} duration={1000} to="getintouch">
+            <Button background="linear-gradient(90deg, #F1E369 -0.36%, #FFA944 100%)">
+              {buttonText}
+            </Button>
+          </Link>
         </Fade>
       </Info>
 
       <CreditCardContainer>
-        <Zoom>
+        <Zoom ssrReveal>
           <CreditCardWithHand />
         </Zoom>
       </CreditCardContainer>

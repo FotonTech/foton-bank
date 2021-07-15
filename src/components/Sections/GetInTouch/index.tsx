@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Fade from "react-reveal/Fade";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { FormInput } from "src/components/common/Form/Input";
+import { Element } from "react-scroll";
 import {
   Container,
   Wrapper,
@@ -91,96 +92,98 @@ export default function GetInTouch({
   };
 
   return (
-    <Container>
-      <Wrapper>
-        <LeftContainer>
-          <Fade bottom>
-            <Title>
-              <MainText>{mainText}</MainText>
-              <HighLightText>{highlight}</HighLightText>
-            </Title>
-          </Fade>
-          <Fade top>
-            <Description>{description}</Description>
-          </Fade>
-        </LeftContainer>
-        <ContactForm onSubmit={handleSubmit(onSubmit)}>
-          <Fade>
-            <Controller
-              name="name"
-              control={control}
-              rules={{ required: "Your name is required." }}
-              render={({ field }) => (
-                <Fade bottom>
-                  <FormInput
-                    error={errors.name}
-                    label="Name"
-                    placeholder="Type your name"
-                    field={field}
+    <Element name="getintouch">
+      <Container>
+        <Wrapper>
+          <LeftContainer>
+            <Fade bottom>
+              <Title>
+                <MainText>{mainText}</MainText>
+                <HighLightText>{highlight}</HighLightText>
+              </Title>
+            </Fade>
+            <Fade top>
+              <Description>{description}</Description>
+            </Fade>
+          </LeftContainer>
+          <ContactForm onSubmit={handleSubmit(onSubmit)}>
+            <Fade>
+              <Controller
+                name="name"
+                control={control}
+                rules={{ required: "Your name is required." }}
+                render={({ field }) => (
+                  <Fade bottom>
+                    <FormInput
+                      error={errors.name}
+                      label={name.label}
+                      placeholder={name.placeholder}
+                      field={field}
+                    />
+                  </Fade>
+                )}
+              />
+              <Controller
+                name="email"
+                control={control}
+                rules={{
+                  required: "Your e-mail is required.",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                    message: "Enter a valid e-mail address.",
+                  },
+                }}
+                render={({ field }) => (
+                  <Fade bottom>
+                    <FormInput
+                      error={errors.email}
+                      label={email.label}
+                      placeholder={email.placeholder}
+                      field={field}
+                    />
+                  </Fade>
+                )}
+              />
+              <Controller
+                name="message"
+                rules={{ required: "Your message is requried." }}
+                control={control}
+                render={({ field }) => (
+                  <Fade bottom>
+                    <FormInput
+                      error={errors.message}
+                      label={message.label}
+                      placeholder={message.placeholder}
+                      field={field}
+                      type="textarea"
+                    />
+                  </Fade>
+                )}
+              />
+            </Fade>
+            <Fade bottom>
+              <Button disabled={isLoading} type="submit">
+                {!isLoading ? (
+                  "Send"
+                ) : (
+                  <StaticImage
+                    src="../../../../static/loader.svg"
+                    width={44}
+                    height={44}
+                    alt="Loading page..."
                   />
-                </Fade>
-              )}
-            />
-            <Controller
-              name="email"
-              control={control}
-              rules={{
-                required: "Your e-mail is required.",
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "Enter a valid e-mail address.",
-                },
-              }}
-              render={({ field }) => (
-                <Fade bottom>
-                  <FormInput
-                    error={errors.email}
-                    label="E-mail"
-                    placeholder="Enter your best email here"
-                    field={field}
-                  />
-                </Fade>
-              )}
-            />
-            <Controller
-              name="message"
-              rules={{ required: "Your message is requried." }}
-              control={control}
-              render={({ field }) => (
-                <Fade bottom>
-                  <FormInput
-                    error={errors.message}
-                    label="Mesage"
-                    placeholder="Tell us about your project"
-                    field={field}
-                    type="textarea"
-                  />
-                </Fade>
-              )}
-            />
-          </Fade>
-          <Fade bottom>
-            <Button disabled={isLoading} type="submit">
-              {!isLoading ? (
-                "Send"
-              ) : (
-                <StaticImage
-                  src="/assets/loader.svg"
-                  width={44}
-                  height={44}
-                  alt="Loading page..."
-                />
-              )}
-            </Button>
-          </Fade>
-          {hasSubmitError && (
-            <FormError>{`An error ocurred while sending your message, please try again later.`}</FormError>
-          )}
-          {hasSubmitSucess && (
-            <FormSucess>{`Yeah! You message was sent. We'll contact you as soon as possible.`}</FormSucess>
-          )}
-        </ContactForm>
-      </Wrapper>
-    </Container>
+                )}
+              </Button>
+            </Fade>
+            {hasSubmitError && (
+              <FormError>{`An error ocurred while sending your message, please try again later.`}</FormError>
+            )}
+            {hasSubmitSucess && (
+              <FormSucess>{`Yeah! You message was sent. We'll contact you as soon as possible.`}</FormSucess>
+            )}
+          </ContactForm>
+        </Wrapper>
+      </Container>
+    </Element>
   );
 }

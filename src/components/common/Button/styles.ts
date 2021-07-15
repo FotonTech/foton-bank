@@ -16,4 +16,11 @@ export const StyledButton = styled.button`
     #ffa944 100%
   );
   border-radius: 50.6468px;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
