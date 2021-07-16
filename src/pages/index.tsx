@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "@reach/router";
-import { navigate } from "gatsby";
 
 import { locales } from "src/constants";
 import First from "src/components/Sections/HomeHero";
