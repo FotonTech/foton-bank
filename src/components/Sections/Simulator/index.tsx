@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+import NumberFormat from 'react-number-format'
 
 import {
   Container,

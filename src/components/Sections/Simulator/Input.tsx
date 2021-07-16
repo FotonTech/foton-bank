@@ -1,24 +1,27 @@
 import React from "react";
-import {
-  InputWrapper,
-  Icon,
-  StyledInput
-} from "./styles";
+import NumberFormat from "react-number-format";
+import { InputWrapper, Icon, StyledInput } from "./styles";
 
-import Svg from '../../common/Svg'
+import Svg from "../../common/Svg";
 
 interface Props {
-  icon: 'US' | 'BR';
+  icon: "US" | "BR";
   placeholder: string;
+  prefix?: string
 }
 
-const Input: React.FC<Props> = ({ icon, placeholder }) => {
+const Input: React.FC<Props> = ({ icon, placeholder, prefix = "$" }) => {
   return (
     <InputWrapper>
       <Icon>
         <Svg icon={icon} />
       </Icon>
-      <StyledInput placeholder={placeholder} />
+      <NumberFormat
+        thousandSeparator={true}
+        prefix={prefix}
+        customInput={StyledInput}
+        placeholder={placeholder}
+      />
     </InputWrapper>
   );
 };
